@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    color: whitesmoke;
+}
+
+header{
+    height: 100px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.galeria-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.galeria-itens{
+    width: 340px;
+    height: 340px;
+    flex-grow: 1;
+    border: 10px solid whitesmoke;
+    box-shadow: 2.5px 2.5px 2.5px whitesmoke; /*atributo para saltar a imagem criando sombra*/
+    overflow: hidden; /*limita o aumento da imagem dentro do quadro*/
+}
+
+.galeria-itens img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*atributo para esticar a imagem ao máximo que puder, e quando não for mais possível, corta-la*/
+    filter: grayscale(100%); /*filtro sobre a imagem que nesse caso a deixa cinza*/
+    transition: all 0.8s linear; /*tempo de transição da imagem*/
+}
+
+.galeria-itens img:hover{
+    filter: grayscale(0%);  /*remove o filtro que fica sobre a imagem para deixar a imagem colorida novamente */
+    transform: scale(110%); /*proporção do aumento da imagem ao passar o cursor*/
+}
+
+footer{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
